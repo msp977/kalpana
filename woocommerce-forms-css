@@ -1,0 +1,25 @@
+<?php
+/*
+Plugin Name:   MSP Woocommerce CSS Plugin
+Plugin URI:    https://github.com/jpen365/custom-css-and-js-plugin
+Description:   Add a custom CSS stylesheet file to WordPress
+Version:       1.0
+Author:        Madhusudan Pokharel
+Author URI:    https://twitter.com/msp977
+*/
+
+
+function msp_css(){
+?>
+<style>
+.woocommerce form .form-row input.input-text,
+.woocommerce form .form-row textarea,
+.woocommerce-page form .form-row input.input-text,
+.woocommerce-page form .form-row select,
+.woocommerce form .form-row input.input-number,
+.woocommerce .quantity input[type="number"]{
+color: #000 !important;
+}
+</style>
+<?php }
+add_action('wp_head','msp_css');
